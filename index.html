@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maps</title>
+    <!-- ----- icons web ------>
+    <link rel="Shortcut icon" type="image" href="assets/img/locatingreen.svg">
+    <!-- --- links style css ------>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- ------ file js ----------->
+    <!-- ---------  detect geoLocation from ----------->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <!-- ------- font google --------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+    <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+    <!-- --- we have to div in this page 'map' and 'geo' ------>
+    <!-- info geo  -->
+    <div class="geo">
+        <div class="info">
+            <h2>IP Address Tracker 
+            </h2>
+            <div class="iptbtn">
+                <input type="text" id="ip-address" placeholder="Search for any IP address or Domain" >
+                <button id="send-ip">
+                    <img src="assets/img/icon-arrow.svg" alt="">
+                </button>
+            </div>
+            <div class="more-info">
+                <li>
+                    <span>IP ADDRESS</span>
+                    <span id="address"></span>
+                </li>
+                <li>
+                    <span>LOCATION</span>
+                    <span id="location"></span>
+                </li>
+                <li>
+                    <span>TIMEZONE</span>
+                    <span class="UTC">
+                        UTC <span id="timezone"></span>
+                    </span>
+                </li>
+                <li>
+                    <span>ISP</span>
+                    <span id="isp">
+                    </span>
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- map div  -->
+</body>
+</html>
+    

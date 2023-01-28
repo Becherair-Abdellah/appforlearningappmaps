@@ -1,0 +1,136 @@
+:root {
+    --VeryDark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.info {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.geo {
+    background: url("../img/pattern-bg.png");
+    height: 243px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info h2 {
+    color: white;
+    text-align: center;
+    padding: 1.3rem 0;
+}
+
+.info .iptbtn {
+    position: relative;
+    margin: 0rem 0 1rem;
+}
+
+.info .iptbtn input {
+    border: 0;
+    height: 45px;
+    border-radius: .7rem 0 0 .7rem;
+    width: 83%;
+    outline: none;
+    padding: 0 17px;
+    font-size: 17px;
+    color: var(--VeryDark-Gray);
+}
+
+.info .iptbtn button {
+    height: 45px;
+    width: 17%;
+    border: 0;
+    border-radius: 0 .7rem .7rem 0;
+    background-color: hsl(0deg 0% 0%);
+    position: absolute;
+    cursor: pointer;
+}
+
+.more-info {
+    background: white;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    transition: .8s;
+    height: 0px;
+}
+
+.more-info.height {
+    height: 260px;
+    padding: 1rem 0;
+}
+
+.more-info li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.more-info li span:first-child {
+    margin-bottom: .7rem;
+    font-size: 10px;
+    font-weight: bold;
+    color: hsl(0deg 0% 62%);
+    letter-spacing: 1px;
+}
+
+.more-info li span:last-child {
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+}
+
+.leaflet-touch .leaflet-bar {
+    position: relative;
+    left: -9px;
+}
+
+#map {
+    height: calc(100% - 243px);
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 13px;
+}
+
+/* // media */
+@media (min-width:425px) {
+    .more-info li {
+        text-align: center;
+    }
+
+    .more-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-direction: row;
+        height: fit-content;
+        padding: 1rem 0;
+    }
+    .more-info.height{
+        height: 90px;
+    }
+}
